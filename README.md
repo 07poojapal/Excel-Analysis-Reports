@@ -49,6 +49,7 @@ dim_customer : customer_code, customer, market(country), platform(Ecommerce,Bric
 dim_market: market, subzone, region [24 rows]
 dim_product: product_code, division, segment, category, product, variant [299 rows]
 fact_sales_monthly: Date (2018 - 2021), product_Code, customer_code, Qty, net_sales_amount [799963 Rows]
+ns_target : market, date, ns_target 
 
 ## Customer Performance Report 
 1. This report shows Netsales for indivial "Customer" for 2019,2020,2021and 2021 vs 2020
@@ -59,10 +60,17 @@ fact_sales_monthly: Date (2018 - 2021), product_Code, customer_code, Qty, net_sa
    For this I have used CALCULATE([Net Sales],dim_date[FY]='2019') (same for 2020 and 2021)
    Then to get 2021 vs 2020 (formula DIVIDE([Net Sales 21],[Net Sales 20],0)
 
-   2. Using conditional formating, Pivot table design, color formating for showing the databars and color scale
+   Used conditional formating, Pivot table design, color formating for showing the databars and color scale
       
 
 ## Market Performance Report
 1. This report shows Netsales and Target for "Country"/"Market" for 2019, 2020, 2021, 2021-Target, 2021-Target%
+   For this report we need to add target into fact_sales_monthly. We can establish relation between ns_target and fact_sales_monthly using diagram view in power pivot.
+   target21 (formula SUM(ns_targets_2021[ns_target])
+   2021-target21 (formula [NetSales21] - [target21])
+   2021-target% (formula DIVIDE([2021-target],[NetSales 21],0)
+
+   Used conditional formating, Pivot table design, color formating for showing the databars and color scale
+
    
 
