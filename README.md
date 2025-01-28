@@ -14,16 +14,8 @@ The reports contain the below reports
              Power Pivot 
 
 # Important Functions: 
-                     VLOOKUP 
-                     XLOOKUP
-                     SUMIF
-                     UNIQUE
-                     IF
-                     INDEX 
-                     MATCH
-                     COUNT
-                     COUNTIF
-
+                     VLOOKUP, XLOOKUP, SUMIF, UNIQUE, IF, INDEX, MATCH, COUNT, COUNTIF
+                     
 # Statistical Funcations: 
 Mean, Median, Mode, Var, Std deviation, Correlation, PMI
 
