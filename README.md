@@ -8,11 +8,11 @@ The reports contain the below reports
 4. P&L Statement by Markets
 5. P&L Statement by Months
    
-Tools used : Excel 
+# Tools used : Excel 
              Power Query
              Power Pivot 
 
-Important Functions: VLOOKUP 
+# Important Functions: VLOOKUP 
                      XLOOKUP
                      SUMIF
                      UNIQUE
@@ -21,11 +21,12 @@ Important Functions: VLOOKUP
                      MATCH
                      COUNT
                      COUNTIF
-Statistical Funcations: Mean, Median, Mode, Var, Std deviation, Correlation, PMI
 
-Steps : 
+# Statistical Funcations: Mean, Median, Mode, Var, Std deviation, Correlation, PMI
 
-Loaded Dataset in Power Query
-Data Cleaning, transformation and modeling done in Power Query
-Used Power Pivot to summarize and analyze large amounts of data quickly and easily. 
+# Steps : 
+
+1. Loaded Dataset in Power Query
+2. Data Cleaning, transformation and modeling done in Power Query
+3. Used Power Pivot to summarize and analyze large amounts of data quickly and easily. 
 
