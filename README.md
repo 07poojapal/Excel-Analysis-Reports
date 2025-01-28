@@ -8,11 +8,13 @@ The reports contain the below reports
 4. P&L Statement by Markets
 5. P&L Statement by Months
    
-# Tools used : Excel 
+# Tools used : 
+             Excel 
              Power Query
              Power Pivot 
 
-# Important Functions: VLOOKUP 
+# Important Functions: 
+                     VLOOKUP 
                      XLOOKUP
                      SUMIF
                      UNIQUE
@@ -22,7 +24,8 @@ The reports contain the below reports
                      COUNT
                      COUNTIF
 
-# Statistical Funcations: Mean, Median, Mode, Var, Std deviation, Correlation, PMI
+# Statistical Funcations: 
+Mean, Median, Mode, Var, Std deviation, Correlation, PMI
 
 # Steps : 
 
