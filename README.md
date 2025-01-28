@@ -71,6 +71,31 @@ ns_target : market, date, ns_target
    2021-target% (formula DIVIDE([2021-target],[NetSales 21],0)
 
    Used conditional formating, Pivot table design, color formating for showing the databars and color scale
+   India is lagging behind in terms of target.
+   Target is missing in almost all the countries as per the data in 2021-target%
+   We can see the value lagging by dollars values and %
+
+## Profit and Loss Statement
+1. This report shows NetSales, COGS, Gross Margin, GM% for 2019,2020,2021 and 2021 vs 2020
+   COGS = Manufacturing Cost + Freight (Transportation) + Other Cost
+   Gross Margin = NetSales - COGS
+   Gross Margin % = Gross Margin / Net Sales
+   fact_sales_monthly with two additional colums (freight_cost and manufacturing_cost)
+   Added column Total COGS = fact_sales_monthly[freight_cost]+fact_sales_monthly[manufacturing_cost])
+   In Pivot table add DAX (SUM(fact_sales_monthly[Total_COGS])
+   Gross Margin = [NetSales - COGs]
+   GM% =DIVIDE([Gross Margin],[Net Sales],0)
+
+## Profit and Loss Statement by Month and Quarters
+1. For this we need month from the date column. For this I used formula (FORMAT([date],"mmm"))
+2. To get Fiscal month number MONTH(DATE(YEAR([date]),MONTH([date])+4,1)
+3. To get quarter "Q" & ROUNDUP([fy_month_no]/3,0)
+4. Then added Fiscal month and Quarter in the report.
+
+   GM, Sales are higher in Nov and Dec as compared to the other months.
+   Net_Sales Comparision
+   21 vs 20 (For this we can divide each metric for 21 and 20)
+   20 vs 19
 
    
 
