@@ -23,7 +23,7 @@ Mean, Median, Mode, Var, Std deviation, Correlation, PMI
 ETL
 1. Loaded Dataset into excel(Power Query)
 2. Data Cleaning, transformation and modeling done in Power Query -
-   1. This inclused spell checking and replacing the correct values/names in power query, replaced incorrect data while exporting to correct one. For example: market region for Canada 
+   1. This inclued spell checking and replacing the correct values/names in power query, replaced incorrect data while exporting to correct one. For example: market region for Canada 
       and USA was nan instead NA. Converted Qty values which were negative to absolute values.
    2. Connected tables using Data Modelling (Fact and Dimension tables - connecting tables mentioned in step 4 below using star schema. That is joining dimension tables with fact tables)
       To verify proper data mdelling:
