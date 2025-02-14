@@ -46,37 +46,39 @@ ns_target : market, date, ns_target
 ## Customer Performance Report 
 1. This report shows Netsales for indivial "Customer" for 2019,2020,2021and 2021 vs 2020
    Tool - Pivot Table
-   DAX Measure in Power Pivot for 2021 vs 2020 (For this we need NetSales for 2019, 2020 and 2021)
-   Formula (NetSales = SUM(fact_sales_monthly[net_sales_amount])
-   Get the FY column in fact_sales_monthly to get NetSales in 2019,2020 and 2021 (forumla RELATED(dim_date[FY]))
-   For this I have used CALCULATE([Net Sales],dim_date[FY]='2019') (same for 2020 and 2021)
-   Then to get 2021 vs 2020 (formula DIVIDE([Net Sales 21],[Net Sales 20],0)
+   -DAX Measure in Power Pivot for 2021 vs 2020 (For this we need NetSales for 2019, 2020 and 2021)
+   -Formula (NetSales = SUM(fact_sales_monthly[net_sales_amount])
+   -Get the FY column in fact_sales_monthly to get NetSales in 2019,2020 and 2021 (forumla RELATED(dim_date[FY]))
+   -For this I have used CALCULATE([Net Sales],dim_date[FY]='2019') (same for 2020 and 2021)
+   -Then to get 2021 vs 2020 (formula DIVIDE([Net Sales 21],[Net Sales 20],0)
 
    Used conditional formating, Pivot table design, color formating for showing the databars and color scale
       
 
 ## Market Performance Report
 1. This report shows Netsales and Target for "Country"/"Market" for 2019, 2020, 2021, 2021-Target, 2021-Target%
-   For this report we need to add target into fact_sales_monthly. We can establish relation between ns_target and fact_sales_monthly using diagram view in power pivot.
-   target21 (formula SUM(ns_targets_2021[ns_target])
-   2021-target21 (formula [NetSales21] - [target21])
-   2021-target% (formula DIVIDE([2021-target],[NetSales 21],0)
+   -For this report we need to add target into fact_sales_monthly. We can establish relation between ns_target and fact_sales_monthly using diagram view in power pivot.
+   -target21 (formula SUM(ns_targets_2021[ns_target])
+   -2021-target21 (formula [NetSales21] - [target21])
+   -2021-target% (formula DIVIDE([2021-target],[NetSales 21],0)
 
    Used conditional formating, Pivot table design, color formating for showing the databars and color scale
-   India is lagging behind in terms of target.
-   Target is missing in almost all the countries as per the data in 2021-target%
-   We can see the value lagging by dollars values and %
+
+    -India is lagging behind in terms of target.
+    -Target is missing in almost all the countries as per the data in 2021-target%
+    -We can see the value lagging by dollars values and %
 
 ## Profit and Loss Statement
 1. This report shows NetSales, COGS, Gross Margin, GM% for 2019,2020,2021 and 2021 vs 2020
-   COGS = Manufacturing Cost + Freight (Transportation) + Other Cost
-   Gross Margin = NetSales - COGS
-   Gross Margin % = Gross Margin / Net Sales
-   fact_sales_monthly with two additional colums (freight_cost and manufacturing_cost)
-   Added column Total COGS = fact_sales_monthly[freight_cost]+fact_sales_monthly[manufacturing_cost])
-   In Pivot table add DAX (SUM(fact_sales_monthly[Total_COGS])
-   Gross Margin = [NetSales - COGs]
-   GM% =DIVIDE([Gross Margin],[Net Sales],0)
+
+   -COGS = Manufacturing Cost + Freight (Transportation) + Other Cost
+   -Gross Margin = NetSales - COGS
+   -Gross Margin % = Gross Margin / Net Sales
+   -fact_sales_monthly with two additional colums (freight_cost and manufacturing_cost)
+   -Added column Total COGS = fact_sales_monthly[freight_cost]+fact_sales_monthly[manufacturing_cost])
+   -In Pivot table add DAX (SUM(fact_sales_monthly[Total_COGS])
+   -Gross Margin = [NetSales - COGs]
+   -GM% =DIVIDE([Gross Margin],[Net Sales],0)
 
 ## Profit and Loss Statement by Month and Quarters
 1. For this we need month from the date column. For this I used formula (FORMAT([date],"mmm"))
@@ -84,10 +86,10 @@ ns_target : market, date, ns_target
 3. To get quarter "Q" & ROUNDUP([fy_month_no]/3,0)
 4. Then added Fiscal month and Quarter in the report.
 
-   GM, Sales are higher in Nov and Dec as compared to the other months.
-   Net_Sales Comparision
-   21 vs 20 (For this we can divide each metric for 21 and 20)
-   20 vs 19
+   -GM, Sales are higher in Nov and Dec as compared to the other months.
+   -Net_Sales Comparision
+   -21 vs 20 (For this we can divide each metric for 21 and 20)
+   -20 vs 19
 
    
 
